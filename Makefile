@@ -14,3 +14,4 @@ saopt.o:saopt.h
 sasub.o:sasub.h
 sanw.o:sanw.h
 sa.o:sa.h
+
