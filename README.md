@@ -1,13 +1,13 @@
 # sa
 smRNA Aligner Based on Needleman-Wunsch
 
-##Getting started
+##Getting started  
   git clone https://github.com/zhuqianhua/sa.git;  
 	make;  
 	cd example;  
 	sh run.sh;  
   
-##Introduction
+##Introduction  
 SA is a software for small RNA sequence align against to reference, 
 such as miRNA, piRNA, siRNA and so on. It was based on seed search 
 and Needleman-Wunsch global comparison, which makes it more fast 
