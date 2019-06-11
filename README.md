@@ -2,10 +2,10 @@
 smRNA Aligner Based on Needleman-Wunsch
 
 ## Getting started  
-  git clone https://github.com/zhuqianhua/sa.git;  
-	make;  
-	cd example;  
-	sh run.sh;  
+	git clone https://github.com/zhuqianhua/sa.git  
+	make  
+	cd example  
+	sh run.sh  
   
 ## Introduction  
 SA is a software for small RNA sequence align against to reference,   
