@@ -19,6 +19,6 @@ we take the number of mismatch plus one seed searching strategy.
 ## Note
 It relies on multithreaded execution and your system needs to   
 support -lpthread. If you have questions about SA, you may send  
-the questions to zhuqianhua@genomics.cn.  
+the questions to zhuqianhua@bgi.com.  
 
 ## Citing
