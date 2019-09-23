@@ -9,7 +9,7 @@ void _usage()
   printf ("         -r, --ref    *<s>  reference sequence in fasta format\n");
   printf ("         -p, --prefix  <s>  prefix of output, default ./sa \n");
   printf ("         -m, --mismatch<i>  number of mismatch, default 1\n");
-  printf ("         -d, --seed    <i>  length of seed, default 9\n");
+  printf ("         -l, --seed    <i>  length of seed, default 9\n");
   printf ("         -t, --thread  <i>  number of threads, default 1\n");
   printf ("         -a, --all     <b>  report all best alignments, default random one\n");
   printf ("         -b, --debug   <b>  print the debug information\n");
@@ -19,13 +19,13 @@ void _usage()
 
 void _getopt(int argc, char* argv[])
 {
-  char const * shortOpt = "s:r:p:t:m:d:abh";
+  char const * shortOpt = "s:r:p:t:m:l:abh";
   struct option longOpt[] = {
     {"seq", 1, NULL, 's'},
     {"ref", 1, NULL, 'r'},
     {"prefix", 1, NULL, 'p'},
     {"mismatch", 1, NULL, 'm'},
-    {"seed", 1, NULL, 'd'},
+    {"seed", 1, NULL, 'l'},
     {"all", 1, NULL, 'a'},
     {"thread", 1, NULL, 't'},
     {"debug", 0, NULL, 'b'},
@@ -52,7 +52,7 @@ void _getopt(int argc, char* argv[])
       case 'm':
         opts.mismatch = atoi(optarg);
         break;
-      case 'd':
+      case 'l':
         opts.seed = atoi(optarg);
         break;
       case 'a':
