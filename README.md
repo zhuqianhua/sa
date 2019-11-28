@@ -19,7 +19,7 @@ we take the number of mismatch plus one seed searching strategy.
 ### Input format
 To reduce computation, the input files is Fasta format, thus data  
 with Fastq format from smRNA-seq must be transformed to Fasta files  
-before running SA, and TFfa.pl could convert Fastq format to Fasta 
+before running SA, and TFast.pl could convert Fastq format to Fasta 
 format.
 
 ### Output format
