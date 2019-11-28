@@ -17,19 +17,19 @@ we take the number of mismatch plus one seed searching strategy.
 	sh run.sh  
 
 ### Input format
-To reduce computation, the input files is Fasta format, thus data 
-with Fastq format from smRNA-seq must be transformed to Fasta files 
-before running SA, and TFfa.pl could convert Fastq format to Fasta
+To reduce computation, the input files is Fasta format, thus data  
+with Fastq format from smRNA-seq must be transformed to Fasta files  
+before running SA, and TFfa.pl could convert Fastq format to Fasta 
 format.
 
 ### Output format
-The output files are automatically generated in SA:Z alignment tag 
-included in sequence alignment/map format (SAM) format, value 4 
-of the second column in which indicated unmapping, while 0 and 16 
-indicated positive-strand alignment/forward alignment and negative-strand 
-alignment/reverse alignment, respectively. If output results were 
-set as the entirety (parameter: -a or --all), all the results were 
-presented in SA:Z alignment tag. Particularly, SA also provided statistic
+The output files are automatically generated in SA:Z alignment tag  
+included in sequence alignment/map format (SAM) format, value 4  
+of the second column in which indicated unmapping, while 0 and 16  
+indicated positive-strand alignment/forward alignment and negative-strand  
+alignment/reverse alignment, respectively. If output results were  
+set as the entirety (parameter: -a or --all), all the results were  
+presented in SA:Z alignment tag. Particularly, SA also provided statistic 
 information of mapping rates for further analysis.
 
 ## Note
