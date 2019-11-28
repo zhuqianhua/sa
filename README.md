@@ -11,10 +11,10 @@ In order to avoid the seed searching faiture due to the mismatch,
 we take the number of mismatch plus one seed searching strategy.  
 
 ## Getting started  
-	git clone https://github.com/zhuqianhua/sa.git  
-	make  
-	cd example  
-	sh run.sh  
+	git clone https://github.com/zhuqianhua/sa.git   
+	make   
+	cd example   
+	sh run.sh   
 
 ### Input format
 To reduce computation, the input files is Fasta format, thus data  
@@ -29,7 +29,7 @@ of the second column in which indicated unmapping, while 0 and 16
 indicated positive-strand alignment/forward alignment and negative-strand  
 alignment/reverse alignment, respectively. If output results were  
 set as the entirety (parameter: -a or --all), all the results were  
-presented in SA:Z alignment tag. Particularly, SA also provided statistic 
+presented in SA:Z alignment tag. Particularly, SA also provided statistic  
 information of mapping rates for further analysis.
 
 ## Note
