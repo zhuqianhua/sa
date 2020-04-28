@@ -34,7 +34,7 @@ Options | Type | Description
 
 ## Output
 The outputs contain two files, an alignment file in SAM format and  
-a statistic file. The alignment results are automatically generated 
+a statistic file. The alignment results are automatically generated  
 in SA:Z alignment tag  included in sequence alignment/map  
 format (SAM) format, value 4 of the second column in which indicated  
 unmapping, while 0 and 16 indicated positive-strand alignment/forward  
