@@ -40,6 +40,8 @@ int main(int argc, char* argv[])
   sprintf(rate, "%.2f", float(stas.mapped * 100 / stas.total));
   ostat << "Mapping rate\t" << rate << "%" << endl;
   ostat.close();
+  if (opts.typ.compare("q") == 0)
+    remove(opts.seq.c_str());
   return 0;
 }
 
