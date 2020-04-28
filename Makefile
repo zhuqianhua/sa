@@ -6,6 +6,7 @@ VPATH = src
 
 sa : ${OBJ}
 	${GXX} -o sa ${OBJ} ${DLD} ${SLD}
+	cp -rf src/TFa.pl .
 .PHONY : clean
 clean : 
 	rm -f ${OBJ}

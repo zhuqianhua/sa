@@ -6,7 +6,9 @@ int main(int argc, char* argv[])
   string oaln = opts.prefix + ".sam", ostt = opts.prefix + "_stat.xls";
   ofile.open(oaln.c_str());
   ofile << "@HD\tVN:1.5\tSO:unsorted" << endl;
-  _loadref(); //return 0;
+  _loadref();
+  if (opts.typ.compare("q") == 0)
+    _fastq();
   ifstream iseq(opts.seq.c_str());
   string line;
   while (!iseq.eof())

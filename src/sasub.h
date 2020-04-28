@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <pthread.h>
+#include <unistd.h>
 #include "saopt.h"
 #include "sanw.h"
 #define THREAD_NUMBER 16
@@ -15,6 +16,7 @@ void _usage();
 void _getopt(int argc, char* argv[]);
 void _loadref();
 void _align();
+void _fastq();
 string _revcomp(string &str);
 
 extern ofstream ofile;

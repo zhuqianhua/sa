@@ -10,7 +10,7 @@
 using namespace std;
 
 struct Options {
-  string seq, ref, prefix;
+  string typ, seq, ref, prefix;
   int thread, mismatch, seed;
   bool all, debug, help;
 };

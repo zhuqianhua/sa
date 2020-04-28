@@ -1,6 +1,6 @@
 #include "saopt.h"
 
-Options opts = {"", "", "./sa", 
+Options opts = {"f", "", "", "./sa", 
                 1, 1, 9,
                };
 

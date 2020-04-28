@@ -5,7 +5,8 @@ void _usage()
   printf ("\nProgram: sa (smRNA Aligner Based on Needleman-Wunsch)\n");
   printf ("Contact: Qianhua ZHU <zhuqianhua@bgi.com>\n\n");
   printf ("Usage  : sa [options]\n\n");
-  printf ("Options: -s, --seq    *<s>  small rna sequence in fasta format\n");
+  printf ("Options: -q, --query   <s>  type of small rna data, f for fasta and q for fastq, default f\n");
+  printf ("         -s, --seq    *<s>  small rna data in fasta/fastq format\n");
   printf ("         -r, --ref    *<s>  reference sequence in fasta format\n");
   printf ("         -p, --prefix  <s>  prefix of output, default ./sa \n");
   printf ("         -m, --mismatch<i>  number of mismatch, default 1\n");
@@ -19,8 +20,9 @@ void _usage()
 
 void _getopt(int argc, char* argv[])
 {
-  char const * shortOpt = "s:r:p:t:m:l:abh";
+  char const * shortOpt = "q:s:r:p:t:m:l:abh";
   struct option longOpt[] = {
+    {"query", 1, NULL, 'q'},
     {"seq", 1, NULL, 's'},
     {"ref", 1, NULL, 'r'},
     {"prefix", 1, NULL, 'p'},
@@ -37,6 +39,9 @@ void _getopt(int argc, char* argv[])
   {
     switch (nextOpt) 
     {
+      case 'q':
+        opts.typ = optarg;
+        break;		
       case 's':
         opts.seq = optarg;
         break;
@@ -174,3 +179,12 @@ void _align()
   ofile << endl;
 }
 
+void _fastq()
+{
+  char path[1024];
+  readlink("/proc/self/exe", path, sizeof(path)-1);  
+  string pat = path;
+  string cmd = "perl " + pat.substr(0, pat.size()-3) + "TFa.pl " + opts.seq + " " + opts.prefix + ".fa";
+  system(cmd.c_str());
+  opts.seq = opts.prefix + ".fa";
+}
