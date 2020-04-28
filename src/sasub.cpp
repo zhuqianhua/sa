@@ -184,7 +184,7 @@ void _fastq()
   char path[1024];
   readlink("/proc/self/exe", path, sizeof(path)-1);  
   string pat = path;
-  string cmd = "perl " + pat.substr(0, pat.size()-3) + "TFa.pl " + opts.seq + " " + opts.prefix + ".fa";
+  string cmd = "perl " + pat.substr(0, pat.size()-3) + "/TFa.pl " + opts.seq + " " + opts.prefix + ".fa";
   system(cmd.c_str());
   opts.seq = opts.prefix + ".fa";
 }
